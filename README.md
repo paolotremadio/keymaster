@@ -35,6 +35,10 @@ Put the binary somewhere in your path.
 
 The first time you `get` the secret, you should "always allow" the `keymaster` binary. Upon subsequent accesses, you will always be prompted for TouchID in order to access the secret.
 
+The TouchID prompt names the secret, the command that ran `keymaster` and the app it runs in, so you can tell who is asking before you approve:
+
+> keymaster is trying to read secret “MyKeyName” for “bash ~/bin/deploy.sh” in Terminal.
+
 To change the secret, you can use the `Keychain Access.app` that comes with your Mac.
 
 You can use `keymaster` in bash scripts or Automator Workflows, or wherever you need secure access to a secret.
